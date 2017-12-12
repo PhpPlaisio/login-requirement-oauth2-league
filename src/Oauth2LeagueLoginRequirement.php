@@ -104,7 +104,6 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
         unset($_SESSION['oauth2state']);
 
         throw new InvalidUrlException('Invalid state');
-        break;
 
       case ($this->error!==null):
         // An error occurred at the OAuth2 server or the authorization request was denied.
