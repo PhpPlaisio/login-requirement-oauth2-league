@@ -1,0 +1,4 @@
+build:
+    dependencies:
+        before:
+            - cp test/C.txt test/C.php

@@ -1,0 +1,40 @@
+{
+  "name": "setbased/abc-login-requirement-oauth2-league",
+  "description": "ABC-Framework: OAuth2 Login Requirement",
+  "keywords": [
+    "ABC-Framework",
+    "OAuth2",
+    "Login",
+    "Requirement"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0.0",
+    "league/oauth2-client": "^2.0.0",
+    "setbased/abc": "^0.10.10",
+    "setbased/abc-core": "^0.20.12",
+    "setbased/abc-exception": "^0.20.12",
+    "setbased/abc-login-requirement": "^1.0.0"
+  },
+  "require-dev": {
+    "phing/phing": "^2.0.0",
+    "phpunit/phpunit": "^6.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SetBased\\Abc\\Login\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SetBased\\Abc\\Login\\Test\\": "test/"
+    },
+    "classmap": [
+      "test/C.php"
+    ]
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
