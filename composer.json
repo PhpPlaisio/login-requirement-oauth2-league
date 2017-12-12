@@ -14,7 +14,7 @@
     "league/oauth2-client": "^2.0.0",
     "setbased/abc": "^0.10.10",
     "setbased/abc-core": "^0.20.12",
-    "setbased/abc-exception": "^0.20.12",
+    "setbased/abc-exception": "^1.0.0",
     "setbased/abc-login-requirement": "^1.0.0"
   },
   "require-dev": {
