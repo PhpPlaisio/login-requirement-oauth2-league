@@ -8,10 +8,6 @@
     <target name="apigen">
         <exec command="apigen generate --todo --tree --source src --destination doc" passthru="true" checkreturn="true"/>
     </target>
-    <target name="unit">
-        <copy file="test/C.txt" tofile="test/C.php" haltonerror="false"/>
-        <copy file="test/C.php" tofile="test/C.txt" haltonerror="true"/>
-    </target>
 
     <target name="build">
         <echo message=""/>
