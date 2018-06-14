@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+
 namespace SetBased\Abc\Login;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
