@@ -59,7 +59,7 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
    * @since 1.0.0
    * @api
    */
-  public function __construct($provider, $options = [])
+  public function __construct(AbstractProvider $provider, array $options = [])
   {
     $this->provider = $provider;
     $this->options  = $options;
@@ -81,7 +81,7 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
    * @since 1.0.0
    * @api
    */
-  public function validate(&$data)
+  public function validate(array &$data): ?int
   {
     switch (true)
     {
