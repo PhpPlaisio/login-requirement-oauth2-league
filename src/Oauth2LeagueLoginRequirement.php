@@ -3,10 +3,10 @@
 namespace SetBased\Abc\Login;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
+use SetBased\Abc\Abc;
 use SetBased\Abc\C;
 use SetBased\Abc\Exception\InvalidUrlException;
 use SetBased\Abc\Helper\HttpHeader;
-use SetBased\Abc\Page\CorePage;
 
 /**
  * Login Requirement: Validation against an OAuth2 server.
@@ -64,9 +64,9 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
     $this->provider = $provider;
     $this->options  = $options;
 
-    $this->code  = CorePage::getCgiVar('code');
-    $this->error = CorePage::getCgiVar('error');
-    $this->state = CorePage::getCgiVar('state');
+    $this->code  = Abc::$cgi->getOptString('code');
+    $this->error = Abc::$cgi->getOptString('error');
+    $this->state = Abc::$cgi->getOptString('state');
   }
 
   //--------------------------------------------------------------------------------------------------------------------
