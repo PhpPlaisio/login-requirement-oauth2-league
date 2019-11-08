@@ -7,19 +7,17 @@
     "Login",
     "Requirement"
   ],
-  "type": "library",
   "license": "MIT",
   "require": {
     "php": ">=7.1.0",
     "league/oauth2-client": "^2.0.0",
-    "setbased/abc": "*",
+    "setbased/abc": "^0.10.0",
     "setbased/abc-http-header": "^2.0.0",
-    "setbased/abc-exception": "^1.0.0",
+    "setbased/abc-exception": "^2.0.0",
     "setbased/abc-login-requirement": "^2.0.0"
   },
   "require-dev": {
-    "phing/phing": "^2.0.0",
-    "phpunit/phpunit": "^6.0.0"
+    "phing/phing": "^2.0.0"
   },
   "autoload": {
     "psr-4": {
