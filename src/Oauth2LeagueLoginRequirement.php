@@ -94,7 +94,7 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
         $_SESSION['oauth2state'] = $this->provider->getState();
 
         // Redirect the user agent to the authorization URL.
-        $response = new SeeOtherResponse($authorizationUrl);
+        $response = new SeeOtherResponse($authorizationUrl, false);
         $response->send();
 
         // This is a preparation step (not a validation).
