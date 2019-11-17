@@ -1,12 +1,13 @@
 <?php
+declare(strict_types=1);
 
-namespace SetBased\Abc\Login;
+namespace Plaisio\Login;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
-use SetBased\Abc\Abc;
-use SetBased\Abc\C;
-use SetBased\Abc\Exception\InvalidUrlException;
-use SetBased\Abc\Helper\HttpHeader;
+use Plaisio\C;
+use Plaisio\Exception\InvalidUrlException;
+use Plaisio\Kernel\Nub;
+use Plaisio\Response\SeeOtherResponse;
 
 /**
  * Login Requirement: Validation against an OAuth2 server.
@@ -64,9 +65,9 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
     $this->provider = $provider;
     $this->options  = $options;
 
-    $this->code  = Abc::$cgi->getOptString('code');
-    $this->error = Abc::$cgi->getOptString('error');
-    $this->state = Abc::$cgi->getOptString('state');
+    $this->code  = Nub::$cgi->getOptString('code');
+    $this->error = Nub::$cgi->getOptString('error');
+    $this->state = Nub::$cgi->getOptString('state');
   }
 
   //--------------------------------------------------------------------------------------------------------------------
@@ -93,7 +94,8 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
         $_SESSION['oauth2state'] = $this->provider->getState();
 
         // Redirect the user agent to the authorization URL.
-        HttpHeader::redirectSeeOther($authorizationUrl, false);
+        $response = new SeeOtherResponse($authorizationUrl);
+        $response->send();
 
         // This is a preparation step (not a validation).
         $lgrId = null;

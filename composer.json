@@ -1,32 +1,31 @@
 {
-  "name": "setbased/abc-login-requirement-oauth2-league",
-  "description": "ABC-Framework: OAuth2 Login Requirement",
+  "name": "plaisio/login-requirement-oauth2-league",
+  "description": "PhpPlaisio: OAuth2 Login Requirement",
   "keywords": [
-    "ABC-Framework",
+    "PhpPlaisio",
     "OAuth2",
-    "Login",
-    "Requirement"
+    "Login Requirement"
   ],
   "license": "MIT",
   "require": {
     "php": ">=7.1.0",
     "league/oauth2-client": "^2.0.0",
-    "setbased/abc": "^0.10.0",
-    "setbased/abc-http-header": "^2.0.0",
-    "setbased/abc-exception": "^2.0.0",
-    "setbased/abc-login-requirement": "^2.0.0"
+    "plaisio/exception": "^1.0.0",
+    "plaisio/kernel": "^1.0.0",
+    "plaisio/login-requirement": "^1.0.0",
+    "plaisio/response-core": "^1.0.0"
   },
   "require-dev": {
     "phing/phing": "^2.0.0"
   },
   "autoload": {
     "psr-4": {
-      "SetBased\\Abc\\Login\\": "src/"
+      "Plaisio\\Login\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "SetBased\\Abc\\Login\\Test\\": "test/"
+      "Plaisio\\Login\\Test\\": "test/"
     },
     "classmap": [
       "test/C.php"

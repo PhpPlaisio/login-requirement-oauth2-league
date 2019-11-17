@@ -4,11 +4,6 @@
         <exec command="composer update" checkreturn="true" passthru="true"/>
     </target>
 
-    <!-- Runs ApiGen -->
-    <target name="apigen">
-        <exec command="apigen generate --todo --tree --source src --destination doc" passthru="true" checkreturn="true"/>
-    </target>
-
     <target name="build">
         <echo message=""/>
     </target>
