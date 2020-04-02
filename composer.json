@@ -8,15 +8,15 @@
   ],
   "license": "MIT",
   "require": {
-    "php": ">=7.1.0",
+    "php": ">=7.3",
     "league/oauth2-client": "^2.0.0",
-    "plaisio/exception": "^1.0.0",
-    "plaisio/kernel": "^1.0.0",
-    "plaisio/login-requirement": "^1.0.0",
-    "plaisio/response-core": "^1.0.0"
+    "plaisio/exception": "^1.0",
+    "plaisio/kernel": "^1.0",
+    "plaisio/login-requirement": "^1.0",
+    "plaisio/response-core": "^1.0"
   },
   "require-dev": {
-    "phing/phing": "^2.0.0"
+    "phing/phing": "^2.0"
   },
   "autoload": {
     "psr-4": {
@@ -32,6 +32,7 @@
     ]
   },
   "config": {
-    "bin-dir": "bin/"
+    "bin-dir": "bin/",
+    "sort-packages": true
   }
 }
