@@ -10,10 +10,10 @@
   "require": {
     "php": ">=7.3",
     "league/oauth2-client": "^2.0.0",
-    "plaisio/exception": "^1.0",
-    "plaisio/kernel": "^1.0",
-    "plaisio/login-requirement": "^1.0",
-    "plaisio/response-core": "^1.0"
+    "plaisio/exception": "^1.1",
+    "plaisio/kernel": "^1.1",
+    "plaisio/login-requirement": "^1.1",
+    "plaisio/response-core": "^1.1"
   },
   "require-dev": {
     "phing/phing": "^2.0"
