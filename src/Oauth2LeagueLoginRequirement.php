@@ -65,9 +65,9 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
     $this->provider = $provider;
     $this->options  = $options;
 
-    $this->code  = Nub::$cgi->getOptString('code');
-    $this->error = Nub::$cgi->getOptString('error');
-    $this->state = Nub::$cgi->getOptString('state');
+    $this->code  = Nub::$nub->cgi->getOptString('code');
+    $this->error = Nub::$nub->cgi->getOptString('error');
+    $this->state = Nub::$nub->cgi->getOptString('state');
   }
 
   //--------------------------------------------------------------------------------------------------------------------
