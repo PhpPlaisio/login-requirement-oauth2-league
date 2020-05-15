@@ -1,4 +1,5 @@
 build:
-  before:
-    - export PLAISIO_CONFIG_DIR=test
-    - ./bin/phing kernel
+  tests:
+    before:
+      - export PLAISIO_CONFIG_DIR=test
+      - ./bin/phing kernel
