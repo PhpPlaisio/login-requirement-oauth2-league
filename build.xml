@@ -4,6 +4,13 @@
         <exec command="composer update" checkreturn="true" passthru="true"/>
     </target>
 
+    <target name="kernel">
+        <exec executable="bin/plaisio" checkreturn="true" passthru="true">
+            <arg value="--ansi"/>
+            <arg value="plaisio:kernel-properties"/>
+        </exec>
+    </target>
+
     <target name="build">
         <echo message=""/>
     </target>

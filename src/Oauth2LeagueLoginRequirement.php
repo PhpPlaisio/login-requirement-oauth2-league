@@ -6,13 +6,13 @@ namespace Plaisio\Login;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use Plaisio\C;
 use Plaisio\Exception\InvalidUrlException;
-use Plaisio\Kernel\Nub;
+use Plaisio\PlaisioObject;
 use Plaisio\Response\SeeOtherResponse;
 
 /**
  * Login Requirement: Validation against an OAuth2 server.
  */
-class Oauth2LeagueLoginRequirement implements LoginRequirement
+class Oauth2LeagueLoginRequirement extends PlaisioObject implements LoginRequirement
 {
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -54,20 +54,23 @@ class Oauth2LeagueLoginRequirement implements LoginRequirement
   /**
    * Object constructor.
    *
+   * @param PlaisioObject $object The parent PhpPlaisio object.
    * @param AbstractProvider $provider The OAuth provider.
    * @param array            $options  The options for AbstractProvider::getAuthorizationUrl().
    *
    * @since 1.0.0
    * @api
    */
-  public function __construct(AbstractProvider $provider, array $options = [])
+  public function __construct(PlaisioObject $object, AbstractProvider $provider, array $options = [])
   {
+    parent::__construct($object);
+    
     $this->provider = $provider;
     $this->options  = $options;
 
-    $this->code  = Nub::$nub->cgi->getOptString('code');
-    $this->error = Nub::$nub->cgi->getOptString('error');
-    $this->state = Nub::$nub->cgi->getOptString('state');
+    $this->code  = $this->nub->cgi->getOptString('code');
+    $this->error = $this->nub->cgi->getOptString('error');
+    $this->state = $this->nub->cgi->getOptString('state');
   }
 
   //--------------------------------------------------------------------------------------------------------------------

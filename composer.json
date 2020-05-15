@@ -10,13 +10,15 @@
   "require": {
     "php": ">=7.3",
     "league/oauth2-client": "^2.0.0",
+    "plaisio/cgi": "^1.2",
     "plaisio/exception": "^1.1",
-    "plaisio/kernel": "^2.0",
+    "plaisio/kernel": "^3.0",
     "plaisio/login-requirement": "^1.1",
     "plaisio/response-core": "^1.1"
   },
   "require-dev": {
-    "phing/phing": "^2.0"
+    "phing/phing": "^2.0",
+    "plaisio/console": "^2.0"
   },
   "autoload": {
     "psr-4": {
