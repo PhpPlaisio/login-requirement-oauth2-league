@@ -6,6 +6,7 @@ namespace Plaisio\Login;
 use League\OAuth2\Client\Provider\AbstractProvider;
 use Plaisio\C;
 use Plaisio\Exception\InvalidUrlException;
+use Plaisio\PlaisioInterface;
 use Plaisio\PlaisioObject;
 use Plaisio\Response\SeeOtherResponse;
 
@@ -54,17 +55,17 @@ class Oauth2LeagueLoginRequirement extends PlaisioObject implements LoginRequire
   /**
    * Object constructor.
    *
-   * @param PlaisioObject $object The parent PhpPlaisio object.
+   * @param PlaisioInterface $object   The parent PhpPlaisio object.
    * @param AbstractProvider $provider The OAuth provider.
    * @param array            $options  The options for AbstractProvider::getAuthorizationUrl().
    *
    * @since 1.0.0
    * @api
    */
-  public function __construct(PlaisioObject $object, AbstractProvider $provider, array $options = [])
+  public function __construct(PlaisioInterface $object, AbstractProvider $provider, array $options = [])
   {
     parent::__construct($object);
-    
+
     $this->provider = $provider;
     $this->options  = $options;
 
