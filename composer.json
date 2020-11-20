@@ -14,7 +14,7 @@
     "plaisio/exception": "^1.1",
     "plaisio/kernel": "^3.0",
     "plaisio/login-requirement": "^1.1",
-    "plaisio/response-core": "^1.1"
+    "plaisio/response-core": "^1.1 || ^2.0"
   },
   "require-dev": {
     "phing/phing": "^2.0",
