@@ -3,3 +3,5 @@
 /doc/
 /vendor/
 /composer.lock
+/custom.task.properties
+/custom.type.properties
