@@ -6,7 +6,6 @@
 <th>Social</th>
 <th>Legal</th>
 <th>Release</th>
-<th>Code</th>
 </tr>
 </thead>
 <tbody>
@@ -20,9 +19,6 @@
 </td>
 <td>
 <a href="https://packagist.org/packages/plaisio/login-requirement-oauth2-league"><img src="https://poser.pugx.org/plaisio/login-requirement-oauth2-league/v/stable" alt="Latest Stable Version"/></a><br/>
-</td>
-<td>
-<a href="https://scrutinizer-ci.com/g/PhpPlaisio/login-requirement-oauth2-league/?branch=master"><img src="https://scrutinizer-ci.com/g/PhpPlaisio/login-requirement-oauth2-league/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"/></a>
 </td>
 </tr>
 </tbody>
