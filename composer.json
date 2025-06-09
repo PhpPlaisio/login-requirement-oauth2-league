@@ -10,15 +10,15 @@
   "require": {
     "php": ">=8.3",
     "league/oauth2-client": "^2.6.1",
-    "plaisio/cgi": "^1.3.0",
-    "plaisio/exception": "^1.2.0",
-    "plaisio/kernel": "^3.2.1",
-    "plaisio/login-requirement": "^1.2.0",
-    "plaisio/response-core": "^2.8.0"
+    "plaisio/cgi": "^1.4.0",
+    "plaisio/exception": "^1.3.0",
+    "plaisio/kernel": "^3.3.0",
+    "plaisio/login-requirement": "^1.3.0",
+    "plaisio/response-core": "^2.9.0"
   },
   "require-dev": {
     "phing/phing": "^3.0.1",
-    "plaisio/console-kernel": "^1.0.1"
+    "plaisio/console-kernel": "^1.2.0"
   },
   "autoload": {
     "psr-4": {
